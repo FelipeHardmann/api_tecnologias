@@ -1,4 +1,4 @@
-from ..models import Vaga
+from api.models import Vaga
 
 def listar_vagas():
     vagas = Vaga.objects.all()
