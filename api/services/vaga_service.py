@@ -21,3 +21,14 @@ def listar_vaga_id(id):
         return Vaga.objects.get(id=id)
     except Vaga.DoesNotExist:
         return Http404
+    
+def editar_vaga(vaga_antiga, vaga_nova):
+    vaga_antiga.titulo = vaga_nova.titulo
+    vaga_antiga.descricao = vaga_nova.descricao
+    vaga_antiga.salario = vaga_nova.salario
+    vaga_antiga.local = vaga_nova.local
+    vaga_antiga.quantidade = vaga_nova.quantidade
+    vaga_antiga.contato = vaga_nova.contato
+    vaga_antiga.tipo_contratacao = vaga_nova.tipo_contratacao
+    vaga_antiga.tecnologias = vaga_nova.tecnologias
+    vaga_antiga.save(force_update=True)
