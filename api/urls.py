@@ -1,9 +1,8 @@
 from django.urls import path, include
-from api.views.tecnologia_view import TecnologiaList, TecnologiaDetalhes
-from api.views.vaga_view import VagaList
+from .views import tecnologia_view, vaga_view
 
 urlpatterns = [
-    path('tecnologias/', TecnologiaList.as_view(), name='tecnologia-list'),
-    path('tecnologias/<int:id>', TecnologiaDetalhes.as_view(), name='tecnologia-detalhes'),
-    path('vagas/', VagaList.as_view(), name='vagas-list'),
+    path('tecnologias/', tecnologia_view.TecnologiaList.as_view(), name='tecnologia-list'),
+    path('tecnologias/<int:id>', tecnologia_view.TecnologiaDetalhes.as_view(), name='tecnologia-detalhes'),
+    path('vagas/', vaga_view.VagaList.as_view(), name='vaga-list'),
 ]

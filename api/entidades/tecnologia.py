@@ -6,6 +6,6 @@ class Tecnologia():
     def nome(self):
         return self.__nome
 
-    @nome.setter 
+    @nome.setter
     def nome(self, nome):
         self.__nome = nome
