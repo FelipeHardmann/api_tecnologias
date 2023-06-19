@@ -32,3 +32,6 @@ def editar_vaga(vaga_antiga, vaga_nova):
     vaga_antiga.tipo_contratacao = vaga_nova.tipo_contratacao
     vaga_antiga.tecnologias.set(vaga_nova.tecnologias)
     vaga_antiga.save(force_update=True)
+
+def remover_vaga(vaga):
+    vaga.delete()
