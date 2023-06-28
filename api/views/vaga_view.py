@@ -15,7 +15,7 @@ class VagaList(APIView):
         # paginacao = LimitOffsetPagination()
         vagas = vaga_service.listar_vagas()
         resultado = paginacao.paginate_queryset(vagas, request)
-        serializer = vaga_serialize.VagaSerializer(resultado, many=True)
+        serializer = vaga_serialize.VagaSerializer(resultado, context={'request': request}, many=True)
         return paginacao.get_paginated_response(serializer.data)
         # return Response(serializer.data, status=status.HTTP_200_OK)
 
