@@ -1,8 +1,8 @@
 asgiref==3.7.2
-certifi==2023.5.7
+certifi==2023.7.22
 cffi==1.15.1
 charset-normalizer==3.1.0
-cryptography==41.0.1
+cryptography==41.0.4
 Deprecated==1.2.14
 Django==4.2.3
 django-oauth-toolkit==2.3.0
@@ -16,5 +16,5 @@ pytz==2023.3
 requests==2.31.0
 sqlparse==0.4.4
 typing_extensions==4.6.3
-urllib3==2.0.3
+urllib3==2.0.6
 wrapt==1.15.0
